@@ -41,7 +41,7 @@ export function Select({ multiple, value, onChange, options }: SelectProps) {
 			}
 		}
 	}
-	function isOPtionsSelected(option: SelectOption) {
+	function isOptionsSelected(option: SelectOption) {
 		return multiple ? value.includes(option) : option === value;
 	}
 	useEffect(() => {
@@ -127,7 +127,7 @@ export function Select({ multiple, value, onChange, options }: SelectProps) {
 							onMouseEnter={() => setHighlightedIndex(index)}
 							key={option.value}
 							className={`${styles.option} ${
-								isOPtionsSelected(option) ? styles.selected : ""
+								isOptionsSelected(option) ? styles.selected : ""
 							}
 							${index === highlighedIndex ? styles.highlighted : ""}
 							`}>
